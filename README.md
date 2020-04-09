@@ -6,6 +6,7 @@ To run the example open up the /examples/example.html file.
 Usage is as follows:
 
 **Turn html into json**
+
 Select what part of the document you want to turn into json
 ```
 var initElement = document.getElementById("my-test-div");
@@ -16,6 +17,7 @@ mapDOM(initElement);
 ```
 
 **Turn json into html**
+
 Parse the json string if need be
 ```
 var pageObj = JSON.parse(jsonString)
