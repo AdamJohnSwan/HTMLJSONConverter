@@ -6,19 +6,19 @@ function mapJson(object, element) {
 		element.appendChild(textNode);
 		return;
 	}
-	var newElement = document.createElement(object["TagName"]);
-    if(object["Attributes"]) {
-		for (var key in object["Attributes"]) {
-			if (object["Attributes"].hasOwnProperty(key)) {
+	var newElement = document.createElement(object["tagname"]);
+    if(object["attributes"]) {
+		for (var key in object["attributes"]) {
+			if (object["attributes"].hasOwnProperty(key)) {
 				var newAttribute = document.createAttribute(key);
-				newAttribute.value = object["Attributes"][key];
+				newAttribute.value = object["attributes"][key];
 				newElement.setAttributeNode(newAttribute)
 			}
 		}
     }
-    if(object["Content"]) {
-		for(var i = 0; i < object["Content"].length; i++) {
-			mapJson(object["Content"][i], newElement);
+    if(object["content"]) {
+		for(var i = 0; i < object["content"].length; i++) {
+			mapJson(object["content"][i], newElement);
 		}
     }
     //Add it to the page
